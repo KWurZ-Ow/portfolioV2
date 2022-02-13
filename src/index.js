@@ -20,7 +20,7 @@ const theme = createTheme({
 
 console.log("%cSalut ! 👋", "color: cyan");
 console.log("%cSi c'est mon code que vous cherchez, vous pouvez le trouver sur mon GitHub !", "color: cyan");
-console.log("👉 https://github.com/KWurZ-Ow");
+console.log("👉 https://github.com/KWurZ-Ow/portfolioV2");
 console.log(" ");
 
 ReactDOM.render(
