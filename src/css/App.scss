@@ -17,7 +17,8 @@ $secondaryText: hsl(183, 20%, 70%);
 
 .section {
   background-color: $mainBackground;
-  min-height: 100vh;
+  min-height: calc(100vh - 100px);
+  padding-bottom: 100px;
   display: grid;
   align-items: center;
   justify-items: center;
@@ -37,24 +38,6 @@ $secondaryText: hsl(183, 20%, 70%);
   }
 }
 
-.iconContainer{
-  display: flex;
-  font-size: 3rem;
-  flex-wrap: wrap;
-  row-gap: 1.5rem;
-  span{
-    width: 25%;
-    display: flex;
-    justify-content: center;
-  }
-}
-
-.cardContainer{
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
-}
-
 footer {
   background-color: $mainBackground;
   color: $secondaryText;
@@ -68,16 +51,16 @@ footer {
   }
 }
 
-.error{
-  h1{
+.error {
+  h1 {
     margin: 0;
   }
-  p{
+  p {
     font-size: 2rem;
     margin-top: 0;
     color: $secondaryText;
   }
-  a{
+  a {
     font-size: 1.3rem;
   }
 }
@@ -85,7 +68,7 @@ footer {
 .accueil {
   grid-template-columns: auto 1fr;
   align-items: center;
-
+  padding-bottom: 0;
   .portrait {
     height: 100vh;
   }
@@ -152,15 +135,35 @@ footer {
   .listContainer {
     width: 400px;
     margin: auto;
+    margin-top: 50px;
   }
 }
 
-.competences{
+.competences {
   background-color: $mainBackground;
   grid-template-rows: auto 1fr;
+
+  .iconContainer {
+    margin-top: 40px;
+    display: flex;
+    font-size: 3rem;
+    flex-wrap: wrap;
+    row-gap: 1.5rem;
+    span {
+      width: 25%;
+      display: flex;
+      justify-content: center;
+    }
+  }
 }
 
-.creations{
+.creations {
   background-color: $secondaryBackground;
   grid-template-rows: auto 1fr;
+
+  .cardContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
 }

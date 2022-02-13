@@ -17,7 +17,6 @@ export default function Home() {
 
   const handleLoaded = () => {
     setLoaded(true)
-    setSnacbar(true)
     document.body.style.overflow = "auto"
   }
 
@@ -55,7 +54,7 @@ export default function Home() {
         <Snackbar
           open={snackbar}
           onClose={handleCloseSnackbar}
-          message="🚧 Attention, Ce site est en développent 🚧"
+          message="🚧 Attention, Ce site est en développement 🚧"
           action={snackbarContent}
         />
       </>

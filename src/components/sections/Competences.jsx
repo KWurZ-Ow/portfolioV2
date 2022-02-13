@@ -22,6 +22,7 @@ import {
   SiFigma,
   SiAdobelightroom,
   SiAdobexd,
+  SiExpress,
 } from "react-icons/si"
 import { GrMysql } from "react-icons/gr"
 import { FaSass } from "react-icons/fa"
@@ -43,6 +44,7 @@ const backend = [
   { tooltip: "Firebase", icon: <SiFirebase color="yellow" /> },
   { tooltip: "PHP", icon: <SiPhp color="dodgerblue" /> },
   { tooltip: "MySQL", icon: <GrMysql color="dodgerblue" /> },
+  { tooltip: "Express", icon: <SiExpress color="fuchsia" /> },
 ]
 
 const graphisme = [

@@ -9,7 +9,7 @@ import Avatar from "@mui/material/Avatar"
 import LPB from "../../assets/LPB.png"
 import MMI from "../../assets/MMI.png"
 import GOB from "../../assets/Gobelins.png"
-import Abrakadabra from "../../assets/Abrakadabra.png"
+import hibou from "../../assets/hibou.png"
 import Ellistat from "../../assets/Ellistat.png"
 
 import Separator from "../Separator"
@@ -38,7 +38,7 @@ const formations = [
 const experience = [
   {
     id: 0,
-    avatar: <Avatar alt="Logo Abrakadabra" src={Abrakadabra} />,
+    avatar: <Avatar alt="Logo Abrakadabra" src={hibou} />,
     primary: "Abrakadabra - Voiron (2021)",
     secondary: "Stagiaire développeur PHP 8",
   },
