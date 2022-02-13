@@ -1,0 +1,166 @@
+$mainBackground: hsl(220, 13%, 18%);
+$secondaryBackground: hsl(220, 13%, 28%);
+$secondaryText: hsl(183, 20%, 70%);
+
+.loading {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  background-color: $mainBackground;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  z-index: 5;
+}
+
+.section {
+  background-color: $mainBackground;
+  min-height: 100vh;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  color: white;
+}
+
+.divider {
+  position: relative;
+  align-self: start;
+  top: 0;
+  width: 100%;
+  overflow: hidden;
+  fill: hsl(220, 13%, 18%);
+
+  @media (max-width: 1200px) {
+    display: none;
+  }
+}
+
+.iconContainer{
+  display: flex;
+  font-size: 3rem;
+  flex-wrap: wrap;
+  row-gap: 1.5rem;
+  span{
+    width: 25%;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.cardContainer{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+footer {
+  background-color: $mainBackground;
+  color: $secondaryText;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  img {
+    height: 50%;
+  }
+}
+
+.error{
+  h1{
+    margin: 0;
+  }
+  p{
+    font-size: 2rem;
+    margin-top: 0;
+    color: $secondaryText;
+  }
+  a{
+    font-size: 1.3rem;
+  }
+}
+
+.accueil {
+  grid-template-columns: auto 1fr;
+  align-items: center;
+
+  .portrait {
+    height: 100vh;
+  }
+
+  div {
+    display: flex;
+    flex-direction: column;
+
+    h1 {
+      margin: 0;
+      font-size: 5rem;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: 2rem;
+      color: $secondaryText;
+    }
+
+    p {
+      font-size: 1.1rem;
+      margin-top: 4rem;
+
+      a {
+        color: cyan;
+      }
+    }
+
+    span {
+      transform: translateY(20vh);
+      align-self: center;
+    }
+
+    @media (max-width: 1200px) {
+      padding: 0 50px 0 50px;
+      grid-template-rows: 2fr 3fr;
+      grid-template-columns: 1fr;
+      gap: 50px;
+
+      .portrait {
+        height: 30vh;
+        width: 30vh;
+        border-radius: 50%;
+        object-fit: cover;
+        object-position: -40% 20%;
+        background-color: white;
+      }
+
+      div {
+        align-self: start;
+      }
+
+      span {
+        display: none;
+      }
+    }
+  }
+}
+
+.experience {
+  background-color: $secondaryBackground;
+  grid-template-rows: auto 1fr;
+
+  .listContainer {
+    width: 400px;
+    margin: auto;
+  }
+}
+
+.competences{
+  background-color: $mainBackground;
+  grid-template-rows: auto 1fr;
+}
+
+.creations{
+  background-color: $secondaryBackground;
+  grid-template-rows: auto 1fr;
+}
