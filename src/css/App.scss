@@ -38,6 +38,26 @@ $secondaryText: hsl(183, 20%, 70%);
   }
 }
 
+.imageContainer {
+  width: 750px;
+  height: 422px;
+  display: flex;
+  img {
+    height: 100%;
+    max-width: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+  p {
+    justify-self: center;
+    align-self: center;
+    width: 100%;
+    text-align: center;
+    font-style: italic;
+    color: $secondaryText;
+  }
+}
+
 footer {
   background-color: $mainBackground;
   color: $secondaryText;
