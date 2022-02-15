@@ -11,6 +11,7 @@ import Competences from "../components/sections/Competences"
 import Creations from "../components/sections/Creations"
 
 import Loading from "../components/Loading"
+import Sandwich from "../components/Sandwich"
 
 export default function Home() {
   const [loaded, setLoaded] = useState(false)
@@ -29,6 +30,7 @@ export default function Home() {
 
     setSnacbar(false)
   }
+
   const snackbarContent = (
     <React.Fragment>
       <IconButton
@@ -46,6 +48,7 @@ export default function Home() {
     <>
       {!loaded && <Loading />}
       <>
+        <Sandwich />
         <Presentation handleLoaded={() => handleLoaded()} />
         <Experiences />
         <Competences />

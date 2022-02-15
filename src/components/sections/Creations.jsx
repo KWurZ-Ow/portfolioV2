@@ -204,6 +204,22 @@ export default function Creations() {
       ],
       title: "Angular • Breaking Bad",
       body: `Site utilisant l'API de la série Breaking Bad. Projet réalisé au cours de mon DUT MMI lors du cours d'introduction au framework Angular...`,
+      links: [
+        {
+          url: "https://github.com/KWurZ-Ow/BreakingBad",
+          text: "Code source",
+          Tooltip: "",
+          icon: <SiGithub />,
+          color: "warning",
+        },
+        {
+          url: "https://kwurz-ow.github.io/BreakingBad/characters",
+          text: "Site web",
+          Tooltip: "",
+          icon: <MdOutlineOpenInNew />,
+          color: "info",
+        },
+      ],
     },
     {
       image: power,
@@ -219,6 +235,22 @@ export default function Creations() {
       ],
       title: "Angular • Power",
       body: `Application Angular utilisant la Realtime Database de Firebase. Reproduit un vieux jeu de plateau. Se joue avec plusieurs smartphones et un PC...`,
+      links: [
+        {
+          url: "https://github.com/KWurZ-Ow/power",
+          text: "Code source",
+          Tooltip: "",
+          icon: <SiGithub />,
+          color: "warning",
+        },
+        {
+          url: "https://kwurz-ow.github.io/power/",
+          text: "Site web",
+          Tooltip: "",
+          icon: <MdOutlineOpenInNew />,
+          color: "info",
+        },
+      ],
     },
     {
       image: goblinstagram,
@@ -233,6 +265,15 @@ export default function Creations() {
       ],
       title: "Angular • Goblinstagram",
       body: `Application Angular utilisant l'API faker. Projet final d'évaluation de module Angular de mon Bachelor Gobelins...`,
+      links: [
+        {
+          url: "https://github.com/KWurZ-Ow/projetAngular",
+          text: "Code source",
+          Tooltip: "",
+          icon: <SiGithub />,
+          color: "warning",
+        },
+      ],
     },
     {
       image: dataviz,
@@ -247,6 +288,16 @@ export default function Creations() {
       ],
       title: "React • Dataviz",
       body: `Application React réalisée dans le cadre du module Dataviz (Data-Visualization) du mon Bachelor Gobelins. Utilise le plugin MapBox...`,
+      links: [
+        {
+          url: "",
+          text: "Code source",
+          Tooltip: "Code source confidentiel",
+          icon: <SiGithub />,
+          color: "error",
+          disabled: true,
+        },
+      ],
     },
     {
       image: api,
@@ -264,6 +315,15 @@ export default function Creations() {
       ],
       title: "Node JS • API Films",
       body: `API utilisant Express et et Firebase. Réalisée dans le cadre de mon Bachelor Gobelins, elle permet de récupérer une BDD de films...`,
+      links: [
+        {
+          url: "https://github.com/KWurZ-Ow/APInodeJS",
+          text: "Code source",
+          Tooltip: "",
+          icon: <SiGithub />,
+          color: "warning",
+        },
+      ],
     },
     {
       image: abrakadabra,
@@ -495,7 +555,7 @@ export default function Creations() {
       <Container maxWidth="lg">
         <h1>Mes créations ✨</h1>
         <div className="cardContainer">
-          {cards.map((card) => {
+          {cards.sort(() => Math.random() - 0.5).map((card) => {
             return (
               <Card key={card.title}>
                 <CardActionArea onClick={toggleDrawer(card.title)}>
