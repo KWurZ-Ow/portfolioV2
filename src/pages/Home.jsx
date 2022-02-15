@@ -1,5 +1,5 @@
 import * as React from "react"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import Footer from "../components/Footer"
 import IconButton from "@mui/material/IconButton"
 import Snackbar from "@mui/material/Snackbar"
@@ -15,11 +15,15 @@ import Sandwich from "../components/Sandwich"
 
 export default function Home() {
   const [loaded, setLoaded] = useState(false)
+  const [loadedPresentation, setLoadedPresentation] = useState(false)
+  const [loadedCreations, setLoadedCreations] = useState(false)
 
-  const handleLoaded = () => {
-    setLoaded(true)
-    document.body.style.overflow = "auto"
-  }
+  useEffect(() => {
+    if (loadedCreations && loadedPresentation) {
+      setLoaded(true)
+      document.body.style.overflow = "auto"
+    }
+  }, [loadedPresentation, loadedCreations])
 
   //🌭 snackbar
   const [snackbar, setSnacbar] = useState(false)
@@ -49,10 +53,10 @@ export default function Home() {
       {!loaded && <Loading />}
       <>
         <Sandwich />
-        <Presentation handleLoaded={() => handleLoaded()} />
+        <Presentation setLoading={setLoadedPresentation} />
         <Experiences />
         <Competences />
-        <Creations />
+        <Creations setLoading={setLoadedCreations} />
         <Footer />
         <Snackbar
           open={snackbar}

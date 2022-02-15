@@ -12,7 +12,7 @@ import {
   Button,
   Tooltip,
 } from "@mui/material"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { Box } from "@mui/system"
 
 import {
@@ -60,8 +60,8 @@ import todo from "../../assets/todo.png"
 import drawerTodo from "../../assets/drawerTodo.png"
 import portfolio from "../../assets/portfolio.png"
 
-export default function Creations() {
-  const cards = [
+export default function Creations({setLoading}) {
+  var cards = [
     {
       image: veltron,
       alt: "Veltron Studios - Le cambriolage",
@@ -422,6 +422,11 @@ export default function Creations() {
       ],
     },
   ]
+  const [cardsRng, setCradsRng] = useState([])
+  useEffect(() => {
+    setCradsRng(cards.sort(() => Math.random() - 0.5))
+  }, [])
+
 
   //drawer
   const [drawer, setDrawer] = useState(false)
@@ -548,14 +553,14 @@ export default function Creations() {
       </Box>
     )
   }
-
+    
   return (
-    <div id="creations" className="section creations">
+    <div id="creations" className="section creations" onLoad={() => setLoading(true)}>
       <Separator />
       <Container maxWidth="lg">
         <h1>Mes créations ✨</h1>
         <div className="cardContainer">
-          {cards.sort(() => Math.random() - 0.5).map((card) => {
+          {cardsRng.map((card) => {
             return (
               <Card key={card.title}>
                 <CardActionArea onClick={toggleDrawer(card.title)}>

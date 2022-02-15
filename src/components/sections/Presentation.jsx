@@ -5,7 +5,7 @@ import IconButton from "@mui/material/IconButton"
 import portrait from "../../assets/portrait.png"
 import portraitContour from "../../assets/portraitContour.png"
 
-export default function Presentation({handleLoaded}) {
+export default function Presentation({setLoading}) {
     const [contour, setContour] = useState(false)
     const [countContour, setCountContour] = useState(1)
   
@@ -21,7 +21,7 @@ export default function Presentation({handleLoaded}) {
       }
     }
   return (
-    <div className="section accueil" onLoad={() => handleLoaded()}>
+    <div className="section accueil" onLoad={() => setLoading(true)}>
       <img
         src={contour ? portraitContour : portrait}
         onClick={() => handleSecretClick()}
