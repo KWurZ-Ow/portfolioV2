@@ -5,6 +5,6 @@ Ah ouais je l'ai fait avec React.
 Il est là 👉️ [mariusproton.fr](https://mariusproton.fr/)
 
 # Pour run le code
-`git clone`\n
+`git clone`
 `npm i`
 `npm start`
