@@ -453,7 +453,7 @@ export default function Creations({ setLoading, setSnackbar, setSnackMessage }) 
       return
     }
     if (isOnMobile){
-      setSnackMessage("Pour en savoir plus, consultez ce site sur PC 💻️")
+      setSnackMessage("Pour voir ça, consultez ce site sur PC 💻️")
       setSnackbar(true)
       return
     }
