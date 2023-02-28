@@ -11,6 +11,7 @@ import {
   Typography,
   Button,
   Tooltip,
+  useMediaQuery,
 } from "@mui/material"
 import { useEffect, useState } from "react"
 import { Box } from "@mui/system"
@@ -60,7 +61,7 @@ import todo from "../../assets/todo.png"
 import drawerTodo from "../../assets/drawerTodo.png"
 import portfolio from "../../assets/portfolio.png"
 
-export default function Creations({setLoading}) {
+export default function Creations({ setLoading, setSnackbar, setSnackMessage }) {
   var cards = [
     {
       image: veltron,
@@ -434,12 +435,26 @@ export default function Creations({setLoading}) {
   const [modaleImage, setModaleImage] = useState(false)
   const [modaleImageContent, setModaleImageContent] = useState(null)
   const [modaleAlt, setModaleAlt] = useState(null)
+  const isOnMobile = useMediaQuery('(max-width:1200px)');
+
+  useEffect(() => {
+    if (isOnMobile) {
+      setSnackMessage("Hum... Ce site est plus sympa sur PC 😇")
+      setSnackbar(true)
+    }
+  }, [isOnMobile])
+  
 
   const toggleDrawer = (id) => (event) => {
     if (
       event.type === "keydown" &&
       (event.key === "Tab" || event.key === "Shift")
     ) {
+      return
+    }
+    if (isOnMobile){
+      setSnackMessage("Pour en savoir plus, consultez ce site sur PC 💻️")
+      setSnackbar(true)
       return
     }
     setDrawer(!drawer)
@@ -531,7 +546,7 @@ export default function Creations({setLoading}) {
                           disableElevation={link.disabled}
                           style={
                             ({ width: "fit-content" },
-                            link.disabled && { cursor: "not-allowed" })
+                              link.disabled && { cursor: "not-allowed" })
                           }
                           color={link.color}
                           target="_blank"
@@ -553,12 +568,12 @@ export default function Creations({setLoading}) {
       </Box>
     )
   }
-    
+
   return (
     <div id="creations" className="section creations" onLoad={() => setLoading(true)}>
-      <Separator />
+      <Separator fill="hsl(220, 13%, 28%)" />
+      <h1>Mes créations ✨</h1>
       <Container maxWidth="lg">
-        <h1>Mes créations ✨</h1>
         <div className="cardContainer">
           {cardsRng.map((card) => {
             return (

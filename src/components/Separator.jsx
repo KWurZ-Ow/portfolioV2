@@ -3,8 +3,8 @@ export default function Separator({fill}) {
     <div className="divider" style={{fill: fill}}>
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 1200 50"
-        height="10vh"
+        viewBox="0 0 1200 51"
+        height="4.25%"
         width="100%"
         preserveAspectRatio="xMaxYMin"
       >

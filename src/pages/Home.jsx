@@ -17,6 +17,7 @@ export default function Home() {
   const [loaded, setLoaded] = useState(false)
   const [loadedPresentation, setLoadedPresentation] = useState(false)
   const [loadedCreations, setLoadedCreations] = useState(false)
+  const [snackMessage, setSnackMessage] = useState("Snackbar")
 
   useEffect(() => {
     if (loadedCreations && loadedPresentation) {
@@ -52,15 +53,16 @@ export default function Home() {
       {!loaded && <Loading />}
       <>
         <Sandwich />
-        <Presentation setLoading={setLoadedPresentation} setSnackbar={setSnacbar}/>
+        <Presentation setLoading={setLoadedPresentation}/>
         <Experiences />
         <Competences />
-        <Creations setLoading={setLoadedCreations} />
+        <Creations setLoading={setLoadedCreations} setSnackbar={setSnacbar} setSnackMessage={setSnackMessage} />
         <Footer />
         <Snackbar
+          autoHideDuration={3000}
           open={snackbar}
           onClose={handleCloseSnackbar}
-          message="Aïe ! Ho Arrête ! Ça va pas ou quoi ? 🤨"
+          message={snackMessage}
           action={snackbarContent}
         />
       </>

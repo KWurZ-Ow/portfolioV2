@@ -1,31 +1,19 @@
-import { useState } from "react"
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown"
 import IconButton from "@mui/material/IconButton"
 
 import portrait from "../../assets/portrait.png"
 // import portraitContour from "../../assets/portraitContour.png"
 
-export default function Presentation({setLoading, setSnackbar}) {
-    // const [contour, setContour] = useState(false)
-    const [countContour, setCountContour] = useState(1)
+export default function Presentation({setLoading, setSnackbar, setSnackMessage}) {
   
-    function handleSecretClick() {
-      setCountContour(countContour + 1)
-      setSnackbar(false)
-      if (countContour === 5) {
-        setCountContour(0)
-        setSnackbar(true)
-      }
-    }
   return (
     <div className="section accueil" onLoad={() => setLoading(true)}>
       <img
         src={portrait}
-        onClick={() => handleSecretClick()}
         className="portrait"
         alt="Portrait Marius Proton"
       />
-      <div style={{width: "700px", height: "100vh"}}></div>
+      <div className="gridFiller" style={{width: "700px", height: "100vh"}}></div>
       <div>
         <h1>Marius Proton</h1>
         <h2>Bienvenue sur mon portfolio !</h2>

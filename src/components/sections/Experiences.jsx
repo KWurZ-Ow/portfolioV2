@@ -57,7 +57,7 @@ const experience = [
 export default function Experiences() {
   return (
     <div id="experiences" className="section experience">
-      <Separator />
+      <Separator fill="hsl(220, 13%, 28%)" />
       <h1>Mes expériences 🧪</h1>
       <div className="gridContainer">
         <div className="listContainer">
