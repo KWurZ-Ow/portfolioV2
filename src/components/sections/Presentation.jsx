@@ -25,6 +25,7 @@ export default function Presentation({setLoading, setSnackbar}) {
         className="portrait"
         alt="Portrait Marius Proton"
       />
+      <div style={{width: "700px", height: "100vh"}}></div>
       <div>
         <h1>Marius Proton</h1>
         <h2>Bienvenue sur mon portfolio !</h2>
@@ -37,7 +38,7 @@ export default function Presentation({setLoading, setSnackbar}) {
           <a href="https://www.gobelins.fr/" target="_blank" rel="noreferrer">
             Gobelins
           </a>{" "}
-          où je suis le bachelor <i>"Développeur web et applications"</i>.{" "}
+          où je suis le master <i>"Design et Management de l'Innovation Intéractive"</i>.{" "}
           <br /> Je travaille en alternance chez{" "}
           <a href="https://ellistat.com/" target="_blank" rel="noreferrer">
             Ellistat
