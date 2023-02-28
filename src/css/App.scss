@@ -47,6 +47,12 @@ li .sandwichItems {
   color: white;
 }
 
+@media (max-width: 1200px) {
+  .section{
+    padding: 3%;
+  }
+}
+
 .divider {
   position: relative;
   align-self: start;
@@ -69,6 +75,9 @@ li .sandwichItems {
     max-width: 100%;
     object-fit: cover;
     border-radius: 5px;
+    @media (max-width: 1200px) {
+      display: none;
+    }
   }
   p {
     justify-self: center;
@@ -91,6 +100,12 @@ footer {
   img {
     height: 50%;
   }
+
+  @media (max-width: 1200px) {
+    img {
+      display: none;
+    }
+  }
 }
 
 .error {
@@ -111,8 +126,25 @@ footer {
   grid-template-columns: auto 1fr;
   align-items: center;
   padding-bottom: 0;
+  
   .portrait {
     height: 100vh;
+  }
+
+  @media (max-width: 1200px) {
+    padding: 0 50px 0 50px;
+    grid-template-rows: 2fr 3fr;
+    grid-template-columns: 1fr;
+    gap: 50px;
+
+    .portrait {
+      height: 30vh;
+      width: 30vh;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: -40% 20%;
+      background-color: white;
+    }
   }
 
   div {
@@ -145,19 +177,9 @@ footer {
     }
 
     @media (max-width: 1200px) {
-      padding: 0 50px 0 50px;
       grid-template-rows: 2fr 3fr;
       grid-template-columns: 1fr;
       gap: 50px;
-
-      .portrait {
-        height: 30vh;
-        width: 30vh;
-        border-radius: 50%;
-        object-fit: cover;
-        object-position: -40% 20%;
-        background-color: white;
-      }
 
       div {
         align-self: start;
@@ -175,15 +197,32 @@ footer {
   grid-template-rows: auto 1fr;
 
   .listContainer {
-    width: 400px;
     margin: auto;
     margin-top: 50px;
+  }
+
+  .gridContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    @media (max-width: 1200px) {
+      grid-template-columns: 1fr;
+    }
   }
 }
 
 .competences {
   background-color: $mainBackground;
-  grid-template-rows: auto 1fr;
+  grid-template-rows: 100px;
+
+  .gridContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    @media (max-width: 1200px) {
+      grid-template-columns: 1fr;
+    }
+  }
 
   .iconContainer {
     margin-top: 40px;
@@ -207,5 +246,10 @@ footer {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
+  }
+  @media (max-width: 1200px) {
+    .cardContainer{
+      grid-template-columns: 1fr;
+    }
   }
 }

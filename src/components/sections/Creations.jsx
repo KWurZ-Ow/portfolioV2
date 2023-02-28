@@ -54,7 +54,7 @@ import goblinstagram from "../../assets/goblinstagram.png"
 import dataviz from "../../assets/dataviz.png"
 import api from "../../assets/api.png"
 import drawerApi from "../../assets/drawerApi.png"
-import abrakadabra from "../../assets/abrakadabra.png"
+import abrakadabra from "../../assets/Abrakadabra.png"
 import drawerAbrakadabra from "../../assets/drawerAbrakadabra.png"
 import todo from "../../assets/todo.png"
 import drawerTodo from "../../assets/drawerTodo.png"
@@ -146,7 +146,7 @@ export default function Creations({setLoading}) {
       ],
       softwares: [],
       title: "Dessin • Starcraft II",
-      body: `Dessin réalisé avec des crayons aquarellables représentant le logo de la faction des Protoss dans le jeu de Blizzard Starcraft II...`,
+      body: `Dessin réalisé avec des crayons aquarellables représentant l'emblème de la faction des Protoss dans le jeu de Blizzard Starcraft II...`,
     },
     {
       image: starwars,
@@ -338,7 +338,7 @@ export default function Creations({setLoading}) {
         <SiMysql color="dodgerblue" fontSize="24px" key="2" />,
       ],
       title: "PHP • Abrakadabra",
-      body: `Rénovation du site de la librairie Abrakadabra de PHP 5.3 à PHP 8.0. Rénovation et améliorations réalisées lors de mon stage de fi d'année...`,
+      body: `Rénovation du site de la librairie Abrakadabra de PHP 5.3 à PHP 8.0. Rénovation et améliorations réalisées lors de mon stage de fin d'année...`,
       links: [
         {
           url: "",
@@ -447,7 +447,7 @@ export default function Creations({setLoading}) {
   }
 
   const drawerData = (cards, creationToDisplay) => {
-    let data = cards.find((item) => item.title == creationToDisplay)
+    let data = cards.find((item) => item.title === creationToDisplay)
 
     function handleModale(data) {
       if (!data.bigImage) {

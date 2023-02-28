@@ -1,6 +1,4 @@
 import Separator from "../Separator"
-import Container from "@mui/material/Container"
-import Grid from "@mui/material/Grid"
 import Tooltip from "@mui/material/Tooltip"
 
 import {
@@ -61,53 +59,45 @@ export default function Competences() {
   return (
     <div id="competences" className="section competences">
       <Separator fill="hsl(220, 13%, 28%)" />
-      <Container maxWidth="lg">
         <h1>Mes compétences 🎓</h1>
-        <Grid container spacing={15}>
-          <Grid item xs={12} lg={4}>
-            <div className="listContainer">
-              <h2>Dev Frontend</h2>
-              <div className="iconContainer">
-                {frontend.map((item) => {
-                  return (
-                    <Tooltip title={item.tooltip} key={item.tooltip}>
-                      <span>{item.icon}</span>
-                    </Tooltip>
-                  )
-                })}
-              </div>
+        <div className="gridContainer">
+          <div className="listContainer">
+            <h2>Dev Frontend</h2>
+            <div className="iconContainer">
+              {frontend.map((item) => {
+                return (
+                  <Tooltip title={item.tooltip} key={item.tooltip}>
+                    <span>{item.icon}</span>
+                  </Tooltip>
+                )
+              })}
             </div>
-          </Grid>
-          <Grid item xs={12} lg={4}>
-            <div className="listContainer">
-              <h2>Dev backend</h2>
-              <div className="iconContainer">
-                {backend.map((item) => {
-                  return (
-                    <Tooltip title={item.tooltip} key={item.tooltip}>
-                      <span>{item.icon}</span>
-                    </Tooltip>
-                  )
-                })}
-              </div>
+          </div>
+          <div className="listContainer">
+            <h2>Dev backend</h2>
+            <div className="iconContainer">
+              {backend.map((item) => {
+                return (
+                  <Tooltip title={item.tooltip} key={item.tooltip}>
+                    <span>{item.icon}</span>
+                  </Tooltip>
+                )
+              })}
             </div>
-          </Grid>
-          <Grid item xs={12} lg={4}>
-            <div className="listContainer">
-              <h2>Graphisme et AV</h2>
-              <div className="iconContainer">
-                {graphisme.map((item) => {
-                  return (
-                    <Tooltip title={item.tooltip} key={item.tooltip}>
-                      <span>{item.icon}</span>
-                    </Tooltip>
-                  )
-                })}
-              </div>
+          </div>
+          <div className="listContainer">
+            <h2>Graphisme et AV</h2>
+            <div className="iconContainer">
+              {graphisme.map((item) => {
+                return (
+                  <Tooltip title={item.tooltip} key={item.tooltip}>
+                    <span>{item.icon}</span>
+                  </Tooltip>
+                )
+              })}
             </div>
-          </Grid>
-        </Grid>
-      </Container>
+          </div>
+        </div>
     </div>
   )
 }

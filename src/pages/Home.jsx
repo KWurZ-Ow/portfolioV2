@@ -31,7 +31,6 @@ export default function Home() {
     if (reason === "clickaway") {
       return
     }
-
     setSnacbar(false)
   }
 
@@ -53,7 +52,7 @@ export default function Home() {
       {!loaded && <Loading />}
       <>
         <Sandwich />
-        <Presentation setLoading={setLoadedPresentation} />
+        <Presentation setLoading={setLoadedPresentation} setSnackbar={setSnacbar}/>
         <Experiences />
         <Competences />
         <Creations setLoading={setLoadedCreations} />
@@ -61,7 +60,7 @@ export default function Home() {
         <Snackbar
           open={snackbar}
           onClose={handleCloseSnackbar}
-          message="🚧 Attention, Ce site est en développement 🚧"
+          message="Aïe ! Ho Arrête ! Ça va pas ou quoi ? 🤨"
           action={snackbarContent}
         />
       </>

@@ -3,27 +3,24 @@ import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown"
 import IconButton from "@mui/material/IconButton"
 
 import portrait from "../../assets/portrait.png"
-import portraitContour from "../../assets/portraitContour.png"
+// import portraitContour from "../../assets/portraitContour.png"
 
-export default function Presentation({setLoading}) {
-    const [contour, setContour] = useState(false)
+export default function Presentation({setLoading, setSnackbar}) {
+    // const [contour, setContour] = useState(false)
     const [countContour, setCountContour] = useState(1)
   
     function handleSecretClick() {
-      if (contour) {
-        setContour(false)
-        setCountContour(1)
-      } else {
-        setCountContour(countContour + 1)
-        if (countContour === 5) {
-          setContour(true)
-        }
+      setCountContour(countContour + 1)
+      setSnackbar(false)
+      if (countContour === 5) {
+        setCountContour(0)
+        setSnackbar(true)
       }
     }
   return (
     <div className="section accueil" onLoad={() => setLoading(true)}>
       <img
-        src={contour ? portraitContour : portrait}
+        src={portrait}
         onClick={() => handleSecretClick()}
         className="portrait"
         alt="Portrait Marius Proton"
