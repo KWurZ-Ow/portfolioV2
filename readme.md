@@ -4,7 +4,7 @@ Ah ouais je l'ai fait avec React.
 
 Il est là 👉️ [mariusproton.fr](https://mariusproton.fr/)
 
-##Pour run le code
-`git clone`
+# Pour run le code
+`git clone`\n
 `npm i`
 `npm start`
