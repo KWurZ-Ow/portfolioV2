@@ -27,11 +27,10 @@ export default function Presentation({setLoading, setSnackbar, setSnackMessage})
             Gobelins
           </a>{" "}
           où je suis le master <i>"Design et Management de l'Innovation Intéractive"</i>.{" "}
-          <br /> Je travaille en alternance chez{" "}
-          <a href="https://ellistat.com/" target="_blank" rel="noreferrer">
-            Ellistat
-          </a>{" "}
-          en tant que développeur JavaScript fullstack
+          <br /> Je cherche une alternance pour ma dernière année de master. Voici{" "}
+          <a href="https://mariusproton.fr/MariusProton-Cv.pdf" target="_blank" rel="noreferrer">
+            mon CV
+          </a>
         </p>
         <span>
           <IconButton href="/#experiences">
