@@ -36,7 +36,7 @@ export default function Footer() {
         </Tooltip>
       </ButtonGroup>
       <p>© Copyright Marius Proton - {new Date().getFullYear()}</p>
-      <img src={logos} alt="Logos Gobelins et Ellistat" />
+      <img src={logos} alt="Logos Gobelins et KWurZ" />
     </footer>
   )
 }

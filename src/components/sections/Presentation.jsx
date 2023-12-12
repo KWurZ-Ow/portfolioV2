@@ -16,7 +16,7 @@ export default function Presentation({setLoading, setSnackbar, setSnackMessage})
       <div className="gridFiller" style={{width: "700px", height: "100vh"}}></div>
       <div>
         <h1>Marius Proton</h1>
-        <h2>Bienvenue sur mon portfolio !</h2>
+        <h2>Bienvenue sur mon portfolio ! 🌊</h2>
         <p>
           Hey ! Je m'appelle Marius, j'ai{" "}
           {new Date(Date.now() - new Date("November 11, 2001")).getFullYear() -
@@ -28,7 +28,7 @@ export default function Presentation({setLoading, setSnackbar, setSnackMessage})
           </a>{" "}
           où je suis le master <i>"Design et Management de l'Innovation Intéractive"</i>.{" "}
           <br /> Je cherche une alternance pour ma dernière année de master. Voici{" "}
-          <a href="https://mariusproton.fr/MariusProton-Cv.pdf" target="_blank" rel="noreferrer">
+          <a href="https://mariusproton.fr/MariusProtonCv.pdf" target="_blank" rel="noreferrer">
             mon CV
           </a>
         </p>
