@@ -6,6 +6,8 @@ import {
   SiTypescript,
   SiHtml5,
   SiCss3,
+  SiDavinciresolve,
+  SiGimp,
   SiAngular,
   SiReact,
   SiNodedotjs,
@@ -15,12 +17,12 @@ import {
   SiFirebase,
   SiAdobephotoshop,
   SiAdobeillustrator,
-  SiAdobepremierepro,
   SiAdobeaftereffects,
   SiFigma,
-  SiAdobelightroom,
-  SiAdobexd,
   SiExpress,
+  SiBlender,
+  SiSocketdotio,
+  SiThreedotjs,
 } from "react-icons/si"
 import { GrMysql } from "react-icons/gr"
 import { FaSass } from "react-icons/fa"
@@ -33,6 +35,7 @@ const frontend = [
   { tooltip: "Angular", icon: <SiAngular color="red" /> },
   { tooltip: "React", icon: <SiReact color="dodgerblue" /> },
   { tooltip: "Scss", icon: <FaSass color="#eb3372" /> },
+  { tooltip: "Three JS", icon: <SiThreedotjs color="lime" /> },
 ]
 
 const backend = [
@@ -43,16 +46,17 @@ const backend = [
   { tooltip: "PHP", icon: <SiPhp color="dodgerblue" /> },
   { tooltip: "MySQL", icon: <GrMysql color="dodgerblue" /> },
   { tooltip: "Express", icon: <SiExpress color="fuchsia" /> },
+  { tooltip: "Socket IO", icon: <SiSocketdotio color="turquoise" /> },
 ]
 
 const graphisme = [
+  { tooltip: "DaVinci Resolve", icon: <SiDavinciresolve color="fuchsia" /> },
   { tooltip: "Photoshop", icon: <SiAdobephotoshop color="dodgerblue" /> },
   { tooltip: "Illustrator", icon: <SiAdobeillustrator color="orange" /> },
-  { tooltip: "Premiere Pro", icon: <SiAdobepremierepro color="purple" /> },
   { tooltip: "After Effects", icon: <SiAdobeaftereffects color="purple" /> },
-  { tooltip: "Adobe XD", icon: <SiAdobexd color="fuchsia" /> },
-  { tooltip: "Lightroom", icon: <SiAdobelightroom color="dodgerblue" /> },
   { tooltip: "Figma", icon: <SiFigma color="fuchsia" /> },
+  { tooltip: "Gimp", icon: <SiGimp color="grey" /> },
+  { tooltip: "Blender", icon: <SiBlender color="orange" /> },
 ]
 
 export default function Competences() {
@@ -60,6 +64,7 @@ export default function Competences() {
     <div id="competences" className="section competences">
       <Separator />
       <h1>Mes compétences 🎓</h1>
+      <p>Voici un apreçu des principales technologies que je maitrise :</p>
       <div className="gridContainer">
         <div className="listContainer">
           <h2>Dev Frontend</h2>

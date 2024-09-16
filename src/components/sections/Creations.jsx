@@ -32,6 +32,9 @@ import {
   SiMysql,
   SiMeteor,
   SiGithub,
+  SiBlender,
+  SiThreedotjs,
+  SiSocketdotio,
 } from "react-icons/si"
 import { MdOutlineOpenInNew } from "react-icons/md"
 
@@ -51,6 +54,7 @@ import pneu from "../../assets/pneu.gif"
 import animation from "../../assets/animation.gif"
 import breakingbad from "../../assets/breakingbad.png"
 import power from "../../assets/power.png"
+import powerV3 from "../../assets/powerV3.png"
 import goblinstagram from "../../assets/goblinstagram.png"
 import dataviz from "../../assets/dataviz.png"
 import api from "../../assets/api.png"
@@ -60,6 +64,8 @@ import drawerAbrakadabra from "../../assets/drawerAbrakadabra.png"
 import todo from "../../assets/todo.png"
 import drawerTodo from "../../assets/drawerTodo.png"
 import portfolio from "../../assets/portfolio.png"
+import elpidia from "../../assets/elpidia.png"
+import silence from "../../assets/silence.png"
 
 export default function Creations({ setLoading, setSnackbar, setSnackMessage }) {
   var cards = [
@@ -254,6 +260,37 @@ export default function Creations({ setLoading, setSnackbar, setSnackMessage }) 
       ],
     },
     {
+      image: powerV3,
+      alt: "Power Version 3",
+      tags: [
+        { label: "Développement", color: "error", outlined: false },
+        { label: "Personnel", color: "info", outlined: true },
+      ],
+      softwares: [
+        <SiReact color="dodgerblue" fontSize="24px" key="1" />,
+        <SiTypescript color="dodgerblue" fontSize="24px" key="2" />,
+        <SiSocketdotio color="turquoise" fontSize="24px" key="3" />,
+      ],
+      title: "Power Version 3.0 (WIP 🚧)",
+      body: `La premiere version du Power ne me convenait pas. Après l'echec de la 2, voici la 3 ! Elle utilise React TS et Socket Io a leur plein potentiels.`,
+      links: [
+        {
+          url: "https://github.com/KWurZ-Ow/powerV3",
+          text: "Code source",
+          Tooltip: "",
+          icon: <SiGithub />,
+          color: "warning",
+        },
+        {
+          url: "https://kwurz-ow.github.io/powerV3/",
+          text: "Site web",
+          Tooltip: "",
+          icon: <MdOutlineOpenInNew />,
+          color: "info",
+        },
+      ],
+    },
+    {
       image: goblinstagram,
       alt: "Angular - Goblinstagram",
       tags: [
@@ -422,10 +459,74 @@ export default function Creations({ setLoading, setSnackbar, setSnackMessage }) 
         },
       ],
     },
+    {
+      image: elpidia,
+      alt: "L'Elpidia",
+      tags: [
+        { label: "Développement", color: "error", outlined: false },
+        { label: "Personnel", color: "info", outlined: true },
+      ],
+      softwares: [
+        <SiJavascript color="yellow" fontSize="24px" key="1" />,
+        <SiThreedotjs color="lime" fontSize="24px" key="2" />,
+        <SiBlender color="orange" fontSize="24px" key="3" />,
+      ],
+      title: "Three Js • Elpidia",
+      body: `Un projet pour mon serveur Discord "L'Elpidia". Il illustre le lore en permettant d'explorer en 3D la station spatiale de l'Elpidia.`,
+      links: [
+        {
+          url: "https://eliteelpidia.fr/",
+          text: "Site",
+          Tooltip: "",
+          icon: <MdOutlineOpenInNew />,
+          color: "info",
+        },
+        {
+          url: "https://github.com/KWurZ-Ow/portfolioV2",
+          text: "Code source",
+          Tooltip: "",
+          icon: <SiGithub />,
+          color: "warning",
+        },
+      ],
+    },
+    {
+      image: silence,
+      alt: "Le roi du silence",
+      tags: [
+        { label: "Développement", color: "error", outlined: false },
+        { label: "Scolaire", color: "success", outlined: true },
+      ],
+      softwares: [
+        <SiJavascript color="yellow" fontSize="24px" key="1" />,
+        <SiThreedotjs color="lime" fontSize="24px" key="2" />,
+        <SiBlender color="orange" fontSize="24px" key="3" />,
+        <SiMeteor color="red" fontSize="24px" key="4" />,
+      ],
+      title: "Three Js • Le roi du silence",
+      body: `Dernier projet scolaire des Gobelins. M'a permis de découvrir Three Js. Malheureusement pas aussi abouti que l'on aurait souhaité...`,
+      links: [
+        {
+          url: "https://roi-du-silence.netlify.app/",
+          text: "Site",
+          Tooltip: "",
+          icon: <MdOutlineOpenInNew />,
+          color: "info",
+        },
+        {
+          url: "https://github.com/LucaCiampi/Le-roi-du-silence",
+          text: "Code source",
+          Tooltip: "",
+          icon: <SiGithub />,
+          color: "warning",
+        },
+      ],
+    },
   ]
   const [cardsRng, setCradsRng] = useState([])
   useEffect(() => {
     setCradsRng(cards.sort(() => Math.random() - 0.5))
+    // setCradsRng(cards)
   }, [])
 
 
@@ -443,7 +544,7 @@ export default function Creations({ setLoading, setSnackbar, setSnackMessage }) 
       setSnackbar(true)
     }
   }, [isOnMobile])
-  
+
 
   const toggleDrawer = (id) => (event) => {
     if (
@@ -452,7 +553,7 @@ export default function Creations({ setLoading, setSnackbar, setSnackMessage }) 
     ) {
       return
     }
-    if (isOnMobile){
+    if (isOnMobile) {
       setSnackMessage("Pour voir ça, consultez ce site sur PC 💻️")
       setSnackbar(true)
       return
