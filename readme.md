@@ -1,6 +1,5 @@
 # Portfolio
-Ouais bah c'est mon portfolio...
-Ah ouais je l'ai fait avec React.
+Mon portfolio
 
 Il est là 👉️ [mariusproton.fr](https://mariusproton.fr/)
 
