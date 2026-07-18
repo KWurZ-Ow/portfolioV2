@@ -471,11 +471,11 @@ export default function Creations({ setLoading, setSnackbar, setSnackMessage }) 
         <SiThreedotjs color="lime" fontSize="24px" key="2" />,
         <SiBlender color="orange" fontSize="24px" key="3" />,
       ],
-      title: "Three Js • Elpidia",
+      title: "Three Js • Elite Elpidia",
       body: `Un projet pour mon serveur Discord "L'Elpidia". Il illustre le lore en permettant d'explorer en 3D la station spatiale de l'Elpidia.`,
       links: [
         {
-          url: "https://eliteelpidia.fr/",
+          url: "https://kwurz-ow.github.io/supraSite/",
           text: "Site",
           Tooltip: "",
           icon: <MdOutlineOpenInNew />,
